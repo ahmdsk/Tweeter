@@ -1,6 +1,6 @@
 function App() {
   return (
-    <h2>Tes</h2>
+    <h1>Hello World</h1>
   )
 }
 
