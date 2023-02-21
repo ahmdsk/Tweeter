@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AiFillCaretDown } from "react-icons/ai"
 import { FaUserCircle, FaUserFriends }  from "react-icons/fa"
 import { MdSettings } from "react-icons/md"
@@ -20,13 +20,13 @@ export default function Header() {
             <div className="w3/12">
                 <ul className="flex gap-10">
                     <li>
-                        <Link to="/" className="text-blue-700 font-medium">Home</Link>
+                        <NavLink to="/" className="text-gray-500 font-medium">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/explore" className="text-gray-500 font-medium">Explore</Link>
+                        <NavLink to="/explore" className="text-gray-500 font-medium">Explore</NavLink>
                     </li>
                     <li>
-                        <Link to="/bookmarks" className="text-gray-500 font-medium">Bookmarks</Link>
+                        <NavLink to="/bookmarks" className="text-gray-500 font-medium">Bookmarks</NavLink>
                     </li>
                 </ul>
             </div>
