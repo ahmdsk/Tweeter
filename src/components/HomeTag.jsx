@@ -27,14 +27,14 @@ export default function HomeTag() {
     ]
 
     return (
-        <div className="bg-white shadow-sm rounded-lg py-4 px-6">
+        <div className="bg-white shadow-sm rounded-lg py-4 px-6 mb-4">
             <h3 className="font-semibold text-gray-700 text-sm">Trends for you</h3>
-            <div className="border my-2"></div>
+            <div className="border border-gray-100 my-2"></div>
             {tag.map(t => {
                 return (
-                    <div className="py-3">
-                        <h3 className="text-gray-700 font-semibold pb-2">{`#${t.tag}`}</h3>
-                        <p className="text-gray-400">{`${t.count}`} Tweets</p>
+                    <div className="py-2">
+                        <h3 className="text-gray-700 font-semibold pb-1">{`#${t.tag}`}</h3>
+                        <p className="text-gray-400 text-sm">{`${t.count}`} Tweets</p>
                     </div>
                 )
             })}

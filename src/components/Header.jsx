@@ -3,15 +3,15 @@ import { AiFillCaretDown } from "react-icons/ai"
 import { FaUserCircle, FaUserFriends }  from "react-icons/fa"
 import { MdSettings } from "react-icons/md"
 import { TbLogout } from "react-icons/tb"
-import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
+import { Menu } from "@headlessui/react"
+import ReactLogo from "../assets/react.svg"
 
 export default function Header() {
     return (
         <header className="bg-white flex justify-between items-center py-4 px-10">
             <div className="w3/12">
                 <div className="flex gap-3 items-center">
-                    <img src="/vite.svg" alt="Logo" className="w-8" />
+                    <img src={ReactLogo} alt="Logo" className="w-8" />
                     <h3 className="text-lg font-semibold text-gray-800">Tweeter</h3>
                 </div>
             </div>
@@ -32,7 +32,7 @@ export default function Header() {
                 <Menu as="div" className="relative">
                     <Menu.Button className="flex gap-3 items-center justify-between">
                         <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="w-10 rounded-lg" />
-                        <h3 className="text-gray-700 font-semibold text-base">Xanthe Neal</h3>
+                        <h3 className="text-gray-700 font-semibold text-sm">Xanthe Neal</h3>
                         <AiFillCaretDown />
                     </Menu.Button>
 
@@ -41,7 +41,7 @@ export default function Header() {
                             {({ active }) => (
                                 <a
                                     className={`text-gray-700 font-medium ${active && 'bg-gray-100'}`}
-                                    href="/account-settings"
+                                    href="/"
                                 ><FaUserCircle className="text-xl" />
                                     My Profile
                                 </a>
@@ -51,7 +51,7 @@ export default function Header() {
                             {({ active }) => (
                                 <a
                                     className={`text-gray-700 font-medium ${active && 'bg-gray-100'}`}
-                                    href="/account-settings"
+                                    href="/"
                                 ><FaUserFriends className="text-xl" />
                                     Group Chat
                                 </a>
@@ -61,7 +61,7 @@ export default function Header() {
                             {({ active }) => (
                                 <a
                                     className={`text-gray-700 font-medium ${active && 'bg-gray-100'}`}
-                                    href="/account-settings"
+                                    href="/"
                                 ><MdSettings className="text-xl" />
                                     Settings
                                 </a>
@@ -72,7 +72,7 @@ export default function Header() {
                             {({ active }) => (
                                 <a
                                     className={`text-red-500 font-medium ${active && 'bg-gray-100'}`}
-                                    href="/account-settings"
+                                    href="/"
                                 ><TbLogout className="text-xl" />
                                     Logout
                                 </a>
