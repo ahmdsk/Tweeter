@@ -38,7 +38,7 @@ export default function Header() {
                         <AiFillCaretDown />
                     </Menu.Button>
 
-                    <Menu.Items className="absolute top-16 right-0 bg-white flex flex-col border-2 rounded-xl py-3 px-4 shadow-md w-64">
+                    <Menu.Items className="absolute top-16 right-0 z-10 bg-white flex flex-col border-2 rounded-xl py-3 px-4 shadow-md w-64">
                         <Menu.Item className="flex items-center gap-3 px-4 py-3 rounded-xl">
                             {({ active }) => (
                                 <a
