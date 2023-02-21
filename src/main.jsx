@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './pages/App'
 import './index.css'
 import Explore from './pages/Explore'
+import Bookmarks from './pages/Bookmarks'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/bookmarks',
-    element: <App />
+    element: <Bookmarks />
   }
 ])
 

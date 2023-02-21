@@ -5,7 +5,7 @@ import { BsImage } from "react-icons/bs"
 export default function TweetSection() {
     return (
         <>
-            <div className="bg-white shadow-sm rounded-lg py-4 px-6 my-6">
+            <div className="bg-white shadow-sm rounded-lg py-4 px-6 mb-6">
                 <div className="flex gap-4 items-center">
                     <div className="w1/12">
                         <img src="https://randomuser.me/api/portraits/men/3.jpg" className="w-10 rounded-lg" alt="Profile User" />

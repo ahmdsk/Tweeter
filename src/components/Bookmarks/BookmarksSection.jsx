@@ -1,9 +1,8 @@
+import LeftMenu from "../Explore/LeftMenu";
 import TweetSection from "../Home/TweetSection";
-import LeftMenu from "./LeftMenu";
-import SearchBar from "./SearchBar";
 
-export default function ExploreSection() {
-    let menu = ['Top', 'Latest', 'People', 'Media'];
+export default function BookmarksSection() {
+    let menu = ['Tweets', 'Tweets & replies', 'Media', 'Likes'];
 
     return (
         <div className="px-32 py-10 flex items-start gap-5">
@@ -11,7 +10,6 @@ export default function ExploreSection() {
                 <LeftMenu menu={menu} />
             </div>
             <div className="w-8/12">
-                <SearchBar />
                 <TweetSection />
             </div>
         </div>

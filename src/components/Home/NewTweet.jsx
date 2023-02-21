@@ -5,7 +5,7 @@ import { HiUsers } from "react-icons/hi"
 
 export default function NewTweet() {
     return (
-        <div className="bg-white shadow-sm rounded-lg py-4 px-6">
+        <div className="bg-white shadow-sm rounded-lg py-4 px-6 mb-3">
             <h3 className="font-semibold text-gray-700 text-sm">Tweet something</h3>
             <div className="border border-gray-100 my-2"></div>
             <div className="flex items-start">
