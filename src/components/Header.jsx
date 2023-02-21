@@ -12,7 +12,9 @@ export default function Header() {
             <div className="w3/12">
                 <div className="flex gap-3 items-center">
                     <img src={ReactLogo} alt="Logo" className="w-8" />
-                    <h3 className="text-lg font-semibold text-gray-800">Tweeter</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                        <Link to="/">Tweeter</Link>
+                    </h3>
                 </div>
             </div>
             <div className="w3/12">
@@ -21,10 +23,10 @@ export default function Header() {
                         <Link to="/" className="text-blue-700 font-medium">Home</Link>
                     </li>
                     <li>
-                        <Link to="/" className="text-gray-500 font-medium">Explore</Link>
+                        <Link to="/explore" className="text-gray-500 font-medium">Explore</Link>
                     </li>
                     <li>
-                        <Link to="/" className="text-gray-500 font-medium">Bookmarks</Link>
+                        <Link to="/bookmarks" className="text-gray-500 font-medium">Bookmarks</Link>
                     </li>
                 </ul>
             </div>

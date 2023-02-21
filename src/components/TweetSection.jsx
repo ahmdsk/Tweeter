@@ -19,7 +19,7 @@ export default function TweetSection() {
                     <p className="text-md text-gray-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae laborum quia autem laboriosam quo nihil porro accusamus neque quisquam quidem.</p>
                 </div>
                 <div className="pb-3">
-                    <img src="https://images.unsplash.com/photo-1676763134382-6572869ba6e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60" className="rounded-md h-72 w-full object-cover object-ceter" alt="User Post" />
+                    <img src="https://images.unsplash.com/photo-1676763134382-6572869ba6e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=htmlFormat&fit=crop&w=900&q=60" className="rounded-md h-72 w-full object-cover object-ceter" alt="User Post" />
                 </div>
                 <div className="flex justify-end pb-3">
                     <div className="flex gap-8">
@@ -58,7 +58,7 @@ export default function TweetSection() {
                     </div>
                     <div className="w-11/12 relative">
                         <input type="text" className="border-2 border-gray-200 focus:outline-none rounded-md h-full w-full pl-4 pr-14 text-gray-600" placeholder="Tweet your reply" />
-                        <label for="img_comment" className="absolute top-1/4 right-4">
+                        <label htmlFor="img_comment" className="absolute top-1/4 right-4">
                             <input type="file" name="img_comment" id="img_comment" className="hidden" />
                             <BsImage className="text-xl text-gray-400" />
                         </label>
@@ -158,7 +158,7 @@ export default function TweetSection() {
                     </div>
                     <div className="w-11/12 relative">
                         <input type="text" className="border-2 border-gray-200 focus:outline-none rounded-md h-full w-full pl-4 pr-14 text-gray-600" placeholder="Tweet your reply" />
-                        <label for="img_comment" className="absolute top-1/4 right-4">
+                        <label htmlFor="img_comment" className="absolute top-1/4 right-4">
                             <input type="file" name="img_comment" id="img_comment" className="hidden" />
                             <BsImage className="text-xl text-gray-400" />
                         </label>

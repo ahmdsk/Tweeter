@@ -16,7 +16,7 @@ export default function NewTweet() {
                     <textarea type="text" className="py-2 mb-2 w-full h-20 resize-none font-medium text-gray-400 focus:outline-none" placeholder="What's happening?"></textarea>
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                            <label for="upload_pict">
+                            <label htmlFor="upload_pict">
                                 <input type="file" id="upload_pict" className="hidden" />
                                 <BsImage className="text-blue-600 text-lg" />
                             </label>
