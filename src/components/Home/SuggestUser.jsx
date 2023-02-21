@@ -1,4 +1,4 @@
-import { FiUserPlus } from "react-icons/fi"
+import { FaUserPlus } from "react-icons/fa"
 
 export default function SuggestUser(props) {
     return (
@@ -14,7 +14,7 @@ export default function SuggestUser(props) {
                     </div>
                 </div>
                 <div className="w-4/12 flex justify-end">
-                    <button className="bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-800 flex items-center gap-2"><FiUserPlus className="font-semibold" /> Follow</button>
+                    <button className="bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-800 flex items-center gap-2"><FaUserPlus className="font-semibold" /> Follow</button>
                 </div>
             </div>
 
