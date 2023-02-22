@@ -13,7 +13,7 @@ export default function ProfileSection() {
                 <div className="md:w-4/12 min-[300px]:w-full">
                     <LeftMenu menu={menu} />
                 </div>
-                <div className="md:w-8/12 min-[300px]:w-full">
+                <div className="md:w-8/12 min-[300px]:w-full min-[300px]:pb-24">
                     <TweetSection />
                 </div>
             </div>
