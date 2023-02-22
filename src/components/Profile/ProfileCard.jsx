@@ -2,7 +2,7 @@ import { FaUserPlus } from "react-icons/fa"
 
 export default function ProfileCard() {
     return (
-        <div className="bg-white mx-28 md:mx-6 py-6 md:py-3 px-8 md:px-4 rounded-lg mb-4">
+        <div className="bg-white lg:mx-28 md:mx-6 py-6 md:py-3 px-8 md:px-4 min-[300px]:mx-3 rounded-lg mb-4">
             <div className="flex">
                 <div className="w-2/12 relative">
                     <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="w-36 rounded-lg absolute bottom-10 md:bottom-16 left-0 border border-4" />

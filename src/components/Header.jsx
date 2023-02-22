@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { AiFillCaretDown } from "react-icons/ai"
-import { FaUserCircle, FaUserFriends }  from "react-icons/fa"
+import { FaUserCircle, FaUserFriends } from "react-icons/fa"
 import { MdSettings } from "react-icons/md"
 import { TbLogout } from "react-icons/tb"
 import { Menu } from "@headlessui/react"
@@ -8,7 +8,7 @@ import ReactLogo from "../assets/react.svg"
 
 export default function Header() {
     return (
-        <header className="bg-white flex justify-between items-center py-4 px-10 md:px-8">
+        <header className="bg-white flex justify-between items-center py-4 px-10 md:px-8 min-[300px]:px-6">
             <div className="w3/12">
                 <div className="flex gap-3 items-center">
                     <img src={ReactLogo} alt="Logo" className="w-8" />
@@ -17,7 +17,7 @@ export default function Header() {
                     </h3>
                 </div>
             </div>
-            <div className="w3/12">
+            <div className="w3/12 min-[300px]:hidden md:inline">
                 <ul className="flex gap-10">
                     <li>
                         <NavLink to="/" className="text-gray-500 font-medium">Home</NavLink>
@@ -34,8 +34,10 @@ export default function Header() {
                 <Menu as="div" className="relative">
                     <Menu.Button className="flex gap-3 items-center justify-between">
                         <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="w-10 rounded-lg" />
-                        <h3 className="text-gray-700 font-semibold text-sm">Ahmad Ganteng</h3>
-                        <AiFillCaretDown />
+                        <div className="md:flex items-center gap-3 min-[300px]:hidden">
+                            <h3 className="text-gray-700 font-semibold text-sm">Ahmad Ganteng</h3>
+                            <AiFillCaretDown />
+                        </div>
                     </Menu.Button>
 
                     <Menu.Items className="absolute top-16 right-0 z-10 bg-white flex flex-col border-2 rounded-xl py-1 px-2 shadow-md w-48">

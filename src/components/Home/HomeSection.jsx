@@ -5,12 +5,12 @@ import TweetSection from "./TweetSection";
 
 export default function HomeSection() {
   return (
-    <div className="xl:px-32 md:px-4 px-8 py-10 flex items-start md:inline-block gap-5">
-        <div className="w-8/12 md:w-full">
+    <div className="xl:px-32 sm:px-4 min-[300px]:px-2 min-[300px]:py-4 md:px-8 md:py-10 md:flex items-start gap-5 sm:inline-block">
+        <div className="md:w-8/12 sm:w-full min-[300px]:w-full">
             <NewTweet />
             <TweetSection />
         </div>
-        <div className="w-4/12 md:hidden">
+        <div className="md:w-4/12 md:inline sm:hidden min-[300px]:hidden">
             <HomeTag />
             <SuggestionFollow />
         </div>

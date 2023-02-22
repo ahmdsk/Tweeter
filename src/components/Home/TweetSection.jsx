@@ -22,7 +22,7 @@ export default function TweetSection() {
                     <img src="https://images.unsplash.com/photo-1676763134382-6572869ba6e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=htmlFormat&fit=crop&w=900&q=60" className="rounded-md h-72 w-full object-cover object-ceter" alt="User Post" />
                 </div>
                 <div className="flex justify-end pb-3">
-                    <div className="flex gap-8">
+                    <div className="flex md:gap-8 min-[300px]:gap-4">
                         <span className="text-gray-400">
                             449 Comments
                         </span>
@@ -37,19 +37,19 @@ export default function TweetSection() {
                 <div className="border-y border-gray-100 py-3 flex justify-center items-center">
                     <div className="w-3/12 flex items-center justify-center gap-2 text-gray-700 font-medium">
                         <MdOutlineModeComment />
-                        <h3>Comment</h3>
+                        <h3 className="min-[300px]:hidden md:inline">Comment</h3>
                     </div>
                     <div className="w-3/12 flex items-center justify-center gap-2 text-green-500 font-medium">
                         <FiRefreshCcw />
-                        <h3>Retweeted</h3>
+                        <h3 className="min-[300px]:hidden md:inline">Retweeted</h3>
                     </div>
                     <div className="w-3/12 flex items-center justify-center gap-2 text-red-500 font-medium">
                         <FiHeart />
-                        <h3>Liked</h3>
+                        <h3 className="min-[300px]:hidden md:inline">Liked</h3>
                     </div>
                     <div className="w-3/12 flex items-center justify-center gap-2 text-blue-700 font-medium">
                         <FiBookmark />
-                        <h3>Saved</h3>
+                        <h3 className="min-[300px]:hidden md:inline">Saved</h3>
                     </div>
                 </div>
                 <div className="flex py-3">
@@ -57,7 +57,7 @@ export default function TweetSection() {
                         <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="w-10 rounded-lg" />
                     </div>
                     <div className="w-11/12 relative">
-                        <input type="text" className="border-2 border-gray-200 focus:outline-none rounded-md h-full w-full pl-4 pr-14 text-gray-600" placeholder="Tweet your reply" />
+                        <input type="text" className="border-2 border-gray-200 focus:outline-none rounded-md h-full w-full ml-2 py-2 pl-4 pr-14 text-gray-600" placeholder="Tweet your reply" />
                         <label htmlFor="img_comment" className="absolute top-1/4 right-4">
                             <input type="file" name="img_comment" id="img_comment" className="hidden" />
                             <BsImage className="text-xl text-gray-400" />
@@ -105,63 +105,6 @@ export default function TweetSection() {
                                 <p className="text-gray-400">12k Likes</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div className="bg-white shadow-sm rounded-lg py-4 px-6 my-6">
-                <div className="flex gap-4 items-center">
-                    <div className="w1/12">
-                        <img src="https://randomuser.me/api/portraits/men/3.jpg" className="w-10 rounded-lg" alt="Profile User" />
-                    </div>
-                    <div className="w-11/12">
-                        <h1 className="text-gray-800 font-semibold text-md">Ahmad Ganteng</h1>
-                        <p className="text-gray-400 text-sm">24 Agustus 1993</p>
-                    </div>
-                </div>
-                <div className="py-4">
-                    <p className="text-md text-gray-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae laborum quia autem laboriosam quo nihil porro accusamus neque quisquam quidem.</p>
-                </div>
-                <div className="flex justify-end pb-3">
-                    <div className="flex gap-8">
-                        <span className="text-gray-400">
-                            449 Comments
-                        </span>
-                        <span className="text-gray-400">
-                            59k Retweets
-                        </span>
-                        <span className="text-gray-400">
-                            234 Saved
-                        </span>
-                    </div>
-                </div>
-                <div className="border-y border-gray-100 py-3 flex justify-center items-center">
-                    <div className="w-3/12 flex items-center justify-center gap-2 text-gray-700 font-medium">
-                        <MdOutlineModeComment />
-                        <h3>Comment</h3>
-                    </div>
-                    <div className="w-3/12 flex items-center justify-center gap-2 text-green-500 font-medium">
-                        <FiRefreshCcw />
-                        <h3>Retweeted</h3>
-                    </div>
-                    <div className="w-3/12 flex items-center justify-center gap-2 text-red-500 font-medium">
-                        <FiHeart />
-                        <h3>Liked</h3>
-                    </div>
-                    <div className="w-3/12 flex items-center justify-center gap-2 text-blue-700 font-medium">
-                        <FiBookmark />
-                        <h3>Saved</h3>
-                    </div>
-                </div>
-                <div className="flex py-3">
-                    <div className="w-1/12">
-                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="w-10 rounded-lg" />
-                    </div>
-                    <div className="w-11/12 relative">
-                        <input type="text" className="border-2 border-gray-200 focus:outline-none rounded-md h-full w-full pl-4 pr-14 text-gray-600" placeholder="Tweet your reply" />
-                        <label htmlFor="img_comment" className="absolute top-1/4 right-4">
-                            <input type="file" name="img_comment" id="img_comment" className="hidden" />
-                            <BsImage className="text-xl text-gray-400" />
-                        </label>
                     </div>
                 </div>
             </div>
