@@ -10,7 +10,7 @@ export default function ProfileCard() {
                 <div className="w-10/12">
                     <div className="flex flex-col justify-between md:items-stretch gap-6 md:gap-3 min-[300px]:gap-3 md:px-4 min-[300px]:items-center">
                         <div className="flex md:flex-row min-[300px]:flex-col justify-between items-center">
-                            <div className="flex md:flex-row min-[300px]:flex-col items-center md:gap-4 min-[300px]:gap-2">
+                            <div className="flex md:flex-row min-[300px]:flex-col items-center md:gap-4 min-[300px]:gap-2 min-[300px]:pt-3">
                                 <h3 className="text-2xl md:text-xl font-semibold text-gray-700">Ahmad Ganteng</h3>
                                 <div className="flex gap-3 md:pb-0 min-[300px]:pb-2 min-[300px]:justify-between">
                                     <div className="flex gap-2">
