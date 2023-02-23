@@ -83,12 +83,12 @@ export default function Header() {
                             <div className="border-b-2 my-2"></div>
                             <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
                                 {({ active }) => (
-                                    <a
+                                    <Link
                                         className={`text-red-600 font-base ${active && 'bg-gray-100'}`}
-                                        href="/"
+                                        to="/login"
                                     ><TbLogout className="text-xl" />
                                         Logout
-                                    </a>
+                                    </Link>
                                 )}
                             </Menu.Item>
                         </Menu.Items>
