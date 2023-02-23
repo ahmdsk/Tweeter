@@ -40,7 +40,7 @@ export default function Header() {
                         </div>
                     </Menu.Button>
 
-                    <Menu.Items className="absolute top-16 right-0 z-10 bg-white flex flex-col border-2 rounded-xl py-1 px-2 shadow-md w-48">
+                    <Menu.Items className="absolute top-16 right-0 z-10 bg-white flex flex-col border-2 rounded-xl p-2 shadow-md w-48">
                         <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
                             {({ active }) => (
                                 <Link
