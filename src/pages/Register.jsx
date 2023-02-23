@@ -5,9 +5,9 @@ import ReactLogo from "../assets/react.svg"
 
 export default function Register() {
     return (
-        <div className="flex justify-center items-center w-full min-h-screen min-[300px]:py-3 md:py-10 px-4">
-            <div className="flex flex-col md:w-1/3 min-[300px]:w-full">
-                <div className="border-2 border-gray-300 rounded-3xl md:px-16 min-[300px]:px-8 py-10">
+        <div className="flex justify-center md:items-center w-full min-h-screen min-[300px]:py-3 md:py-10 px-4">
+            <div className="flex flex-col md:w-1/3 min-[300px]:w-full min-[300px]:justify-between">
+                <div className="md:border-2 border-gray-300 rounded-3xl md:px-16 min-[300px]:px-0 md:py-10">
                     <div className="flex gap-2 items-center pb-6">
                         <img src={ReactLogo} alt="Tweeter Logo" />
                         <h3 className="font-semibold text-[#282051]">Tweeter</h3>
