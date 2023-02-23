@@ -5,7 +5,7 @@ import App from './pages/App'
 import './index.css'
 import Explore from './pages/Explore'
 import Bookmarks from './pages/Bookmarks'
-import Profile from './pages/Profile'
+import DetailProfile from './pages/DetailProfile'
 import Login from './pages/Login'
 import Register from './pages/Register'
 
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <Bookmarks />
   },
   {
-    path: '/profile',
-    element: <Profile />
+    path: '/user',
+    element: <DetailProfile />
   },
   {
     path: '/register',
