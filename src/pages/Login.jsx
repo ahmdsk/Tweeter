@@ -14,7 +14,7 @@ export default function Login() {
                         <h3 className="font-semibold text-[#282051]">Tweeter</h3>
                     </div>
                     <div className="pb-6">
-                        <h3 className="text-gray-800 font-semibold">Login</h3>
+                        <h3 className="text-gray-800 font-semibold">Welcome back people. Login in here to continue communicate</h3>
                     </div>
 
                     <form action="" className="flex flex-col gap-4 pb-8">
