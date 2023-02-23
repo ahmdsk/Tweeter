@@ -3,7 +3,7 @@ import { AiFillCaretDown } from "react-icons/ai"
 import { FaUserCircle, FaUserFriends } from "react-icons/fa"
 import { MdSettings } from "react-icons/md"
 import { TbLogout } from "react-icons/tb"
-import { Menu } from "@headlessui/react"
+import { Menu, Transition } from "@headlessui/react"
 import ReactLogo from "../assets/react.svg"
 
 export default function Header() {
@@ -40,49 +40,59 @@ export default function Header() {
                         </div>
                     </Menu.Button>
 
-                    <Menu.Items className="absolute top-16 right-0 z-10 bg-white flex flex-col border-2 rounded-xl p-2 shadow-md w-48">
-                        <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
-                            {({ active }) => (
-                                <Link
-                                    className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
-                                    to="/profile"
-                                ><FaUserCircle className="text-xl" />
-                                    My Profile
-                                </Link>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
-                            {({ active }) => (
-                                <a
-                                    className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
-                                    href="/"
-                                ><FaUserFriends className="text-xl" />
-                                    Group Chat
-                                </a>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
-                            {({ active }) => (
-                                <a
-                                    className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
-                                    href="/"
-                                ><MdSettings className="text-xl" />
-                                    Settings
-                                </a>
-                            )}
-                        </Menu.Item>
-                        <div className="border-b-2 my-2"></div>
-                        <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
-                            {({ active }) => (
-                                <a
-                                    className={`text-red-600 font-base ${active && 'bg-gray-100'}`}
-                                    href="/"
-                                ><TbLogout className="text-xl" />
-                                    Logout
-                                </a>
-                            )}
-                        </Menu.Item>
-                    </Menu.Items>
+                    <Transition
+                        enter="transition duration-100 ease-out"
+                        enterFrom="transform scale-95 opacity-0"
+                        enterTo="transform scale-100 opacity-100"
+                        leave="transition duration-75 ease-out"
+                        leaveFrom="transform scale-100 opacity-100"
+                        leaveTo="transform scale-95 opacity-0"
+                        className="relative z-50"
+                    >
+                        <Menu.Items className="absolute top-8 right-0 z-50 bg-white flex flex-col border-2 rounded-xl p-2 shadow-md w-48">
+                            <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
+                                {({ active }) => (
+                                    <Link
+                                        className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
+                                        to="/profile"
+                                    ><FaUserCircle className="text-xl" />
+                                        My Profile
+                                    </Link>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
+                                {({ active }) => (
+                                    <a
+                                        className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
+                                        href="/"
+                                    ><FaUserFriends className="text-xl" />
+                                        Group Chat
+                                    </a>
+                                )}
+                            </Menu.Item>
+                            <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
+                                {({ active }) => (
+                                    <a
+                                        className={`text-gray-800 font-base ${active && 'bg-gray-100'}`}
+                                        href="/"
+                                    ><MdSettings className="text-xl" />
+                                        Settings
+                                    </a>
+                                )}
+                            </Menu.Item>
+                            <div className="border-b-2 my-2"></div>
+                            <Menu.Item className="flex items-center gap-3 p-3 rounded-xl">
+                                {({ active }) => (
+                                    <a
+                                        className={`text-red-600 font-base ${active && 'bg-gray-100'}`}
+                                        href="/"
+                                    ><TbLogout className="text-xl" />
+                                        Logout
+                                    </a>
+                                )}
+                            </Menu.Item>
+                        </Menu.Items>
+                    </Transition>
                 </Menu>
             </div>
         </header>

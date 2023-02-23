@@ -1,6 +1,6 @@
 import { RiEarthFill } from "react-icons/ri"
 import { BsImage } from "react-icons/bs"
-import { Menu } from "@headlessui/react"
+import { Menu, Transition } from "@headlessui/react"
 import { HiUsers } from "react-icons/hi"
 
 export default function NewTweet() {
@@ -31,32 +31,41 @@ export default function NewTweet() {
                                     <h3 className="min-[300px]:text-sm">Everyone can reply</h3>
                                 </Menu.Button>
 
-                                <Menu.Items className="absolute top-8 left-0 bg-white flex flex-col border-2 rounded-xl py-3 px-4 shadow-md w-72">
-                                    <div className="pb-3">
-                                        <h3 className="text-gray-700 font-semibold text-md">Who can reply?</h3>
-                                        <p className="text-gray-400 text-sm">Choose who can reply to this tweet</p>
-                                    </div>
-                                    <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
-                                        {({ active }) => (
-                                            <a
-                                                className={`text-gray-800 ${active && 'bg-gray-100'}`}
-                                                href="/"
-                                            ><RiEarthFill className="text-xl" />
-                                                Everyone
-                                            </a>
-                                        )}
-                                    </Menu.Item>
-                                    <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
-                                        {({ active }) => (
-                                            <a
-                                                className={`text-gray-800 ${active && 'bg-gray-100'}`}
-                                                href="/"
-                                            ><HiUsers className="text-xl" />
-                                                People you follow
-                                            </a>
-                                        )}
-                                    </Menu.Item>
-                                </Menu.Items>
+                                <Transition
+                                    enter="transition duration-100 ease-out"
+                                    enterFrom="transform scale-95 opacity-0"
+                                    enterTo="transform scale-100 opacity-100"
+                                    leave="transition duration-75 ease-out"
+                                    leaveFrom="transform scale-100 opacity-100"
+                                    leaveTo="transform scale-95 opacity-0"
+                                >
+                                    <Menu.Items className="absolute top-8 left-0 bg-white flex flex-col border-2 rounded-xl py-3 px-4 shadow-md w-72">
+                                        <div className="pb-3">
+                                            <h3 className="text-gray-700 font-semibold text-md">Who can reply?</h3>
+                                            <p className="text-gray-400 text-sm">Choose who can reply to this tweet</p>
+                                        </div>
+                                        <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
+                                            {({ active }) => (
+                                                <a
+                                                    className={`text-gray-800 ${active && 'bg-gray-100'}`}
+                                                    href="/"
+                                                ><RiEarthFill className="text-xl" />
+                                                    Everyone
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
+                                            {({ active }) => (
+                                                <a
+                                                    className={`text-gray-800 ${active && 'bg-gray-100'}`}
+                                                    href="/"
+                                                ><HiUsers className="text-xl" />
+                                                    People you follow
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                    </Menu.Items>
+                                </Transition>
                             </Menu>
                         </div>
                         <button className="bg-blue-500 text-white font-medium py-2 px-6 rounded hover:bg-blue-800">Tweet</button>

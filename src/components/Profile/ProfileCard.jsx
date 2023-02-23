@@ -5,7 +5,7 @@ export default function ProfileCard() {
         <div className="bg-white lg:mx-28 md:mx-6 py-6 md:py-3 px-8 md:px-4 min-[300px]:mx-3 rounded-lg mb-4">
             <div className="flex md:flex-row min-[300px]:flex-col min-[300px]:items-center">
                 <div className="md:w-2/12 min-[300px]:w-full relative min-[300px]:flex justify-center">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="md:w-36 min-[300px]:w-24 rounded-lg absolute md:bottom-2 md:left-0 border min-[300px]:bottom-0 border-4" />
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User Profile" className="md:w-36 min-[300px]:w-24 rounded-lg absolute md:bottom-2 md:left-0 border min-[300px]:bottom-0 border-4 z-0" />
                 </div>
                 <div className="w-10/12">
                     <div className="flex flex-col justify-between md:items-stretch gap-6 md:gap-3 min-[300px]:gap-3 md:px-4 min-[300px]:items-center">
