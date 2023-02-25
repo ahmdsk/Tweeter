@@ -5,7 +5,6 @@ import ReactLogo from "../assets/react.svg"
 
 export default function Login() {
     return (
-
         <div className="flex justify-center md:items-center w-full min-h-screen min-[300px]:py-3 md:py-10 px-4">
             <div className="flex flex-col md:w-1/3 min-[300px]:w-full min-[300px]:justify-between">
                 <div className="md:border-2 border-gray-300 rounded-3xl md:px-16 min-[300px]:p-0 md:py-10">
