@@ -11,6 +11,8 @@ import Register from './pages/Register'
 import Profile from './pages/Profile'
 import EditProfile from './pages/EditProfile'
 
+import { AppContext } from './context/app-context'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -46,8 +48,14 @@ const router = createBrowserRouter([
   }
 ])
 
+const appProviderValue = {
+  tes: 'tes'
+}
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppContext.Provider value={appProviderValue}>
+      <RouterProvider router={router} />
+    </AppContext.Provider>
   </React.StrictMode>,
 )
