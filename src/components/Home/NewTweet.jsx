@@ -2,8 +2,11 @@ import { RiEarthFill } from "react-icons/ri"
 import { BsImage } from "react-icons/bs"
 import { Menu, Transition } from "@headlessui/react"
 import { HiUsers } from "react-icons/hi"
+import { useState } from "react"
 
 export default function NewTweet() {
+    let [access, setAccess] = useState(true)
+    
     return (
         <div className="bg-white shadow-sm rounded-lg py-4 px-6 mb-3">
             <h3 className="font-semibold text-gray-700 text-sm">Tweet something</h3>
@@ -27,8 +30,13 @@ export default function NewTweet() {
                             </label>
                             <Menu as="div" className="relative">
                                 <Menu.Button className="flex items-center gap-2 min-[300px]:gap-1 text-blue-600">
-                                    <RiEarthFill className="text-xl min-[300px]:text-md" />
-                                    <h3 className="min-[300px]:text-sm">Everyone can reply</h3>
+                                    {access ? <>
+                                        <RiEarthFill className="text-xl min-[300px]:text-md" />
+                                        <h3 className="min-[300px]:text-sm">Everyone can reply</h3>
+                                    </> : <>
+                                        <HiUsers className="text-xl min-[300px]:text-md" />
+                                        <h3 className="min-[300px]:text-sm">People you follow</h3>
+                                    </>}
                                 </Menu.Button>
 
                                 <Transition
@@ -46,22 +54,18 @@ export default function NewTweet() {
                                         </div>
                                         <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
                                             {({ active }) => (
-                                                <a
-                                                    className={`text-gray-800 ${active && 'bg-gray-100'}`}
-                                                    href="/"
-                                                ><RiEarthFill className="text-xl" />
+                                                <h2 className={`text-gray-800 ${active && 'bg-gray-100'}`} onClick={() => setAccess(true)}>
+                                                    <RiEarthFill className="text-xl" />
                                                     Everyone
-                                                </a>
+                                                </h2>
                                             )}
                                         </Menu.Item>
                                         <Menu.Item className="flex items-center gap-2 p-2 rounded-xl">
                                             {({ active }) => (
-                                                <a
-                                                    className={`text-gray-800 ${active && 'bg-gray-100'}`}
-                                                    href="/"
-                                                ><HiUsers className="text-xl" />
+                                                <h2 className={`text-gray-800 ${active && 'bg-gray-100'}`} onClick={() => setAccess(false)}>
+                                                    <HiUsers className="text-xl" />
                                                     People you follow
-                                                </a>
+                                                </h2>
                                             )}
                                         </Menu.Item>
                                     </Menu.Items>
